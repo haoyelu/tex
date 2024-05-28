@@ -1,0 +1,85 @@
+\documentclass[letterpaper,11pt]{watml-notes}
+% Se recomienda leer la documentación de esta
+% clase en https://www.alephsub0.org/recursos/
+
+% -- Paquetes adicionales
+%\usepackage{aleph-comandos}
+\input{config/macro.tex}
+
+
+% -- Datos de las notas
+\university{University of Waterloo}
+\author{Author Name}
+\materia{Trigonometry}
+\note{Equations}
+\date{\today}
+
+\longtitulo{0.58\linewidth}
+\logouno[3cm]{Logos/Waterloo_David_R_Cheriton_School_Logo_vert_rgb}
+\logodos[2.0cm]{Logos/watml}
+
+% -- Comandos adicionales
+
+\begin{document}
+
+\generateHeader
+
+\vspace*{-8mm}
+\section{Trigonometric equations}
+
+\begin{warning}
+    "We assume the properties of the function are known."
+%    \[
+%        \func{\cos}{\R}{\R}
+%        \texty
+%        \func{\arccos}{[-1,1]}{\R}.
+%    \]
+\end{warning}
+
+Recall the following result.
+\begin{theorem}
+    Let \( x \in \mathbb{R} \) and \( y \in [-1, 1] \). We have that if
+\[
+    y = \cos(x),
+\]
+then
+\[
+    x = \arccos(y) + 2k\pi
+\]
+and
+\[
+    x = -\arccos(y) + 2k\pi
+\]
+with \( k \in \mathbb{Z} \)
+\end{theorem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ejercicio 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ex}
+    Solve the equation
+\[
+    1 = 4\cos\left(\frac{x}{3}\right).
+\]
+\end{ex}
+
+\begin{proof}
+   Let's take the equation and divide by 4, obtaining the equivalent expression:
+\[
+\frac{1}{4} = \cos\left(\frac{x}{3}\right),
+\]
+which gives the solutions
+\begin{enumerate}[label=\textit{\alph*)}]
+    \item\label{ej01:c01} \(\displaystyle \frac{x}{3} = \arccos\left(\frac{1}{4}\right) + 2k\pi\), with \(k \in \mathbb{Z}\); or
+    \item\label{ej01:c02} \(\displaystyle \frac{x}{3} = -\arccos\left(\frac{1}{4}\right) + 2k\pi\), with \(k \in \mathbb{Z}\).
+\end{enumerate}
+Thus, the solution to the equation is
+\[
+x = 3\arccos\left(\frac{1}{4}\right) + 6k\pi
+\qquad\text{or}\qquad
+x = -3\arccos\left(\frac{1}{4}\right) + 6k\pi.
+\]
+\end{proof}
+
+
+\end{document}
