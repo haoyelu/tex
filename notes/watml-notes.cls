@@ -43,8 +43,7 @@
     \PassOptionsToPackage{paperwidth=210mm,paperheight=297mm,twoside,
     inner=2.2cm,outer=2.2cm,top=2.25cm,bottom=2.25cm}{geometry}}
 \DeclareOption{letterpaper}{
-    \PassOptionsToPackage{letterpaper,
-    inner=2.cm,outer=2.cm,top=1.5cm,bottom=1.9cm}{geometry}}
+    \PassOptionsToPackage{letterpaper, inner=2cm, outer=2cm, top=1.5cm, bottom=1.9cm}{geometry}}
 \DeclareOption{a5}{
     \PassOptionsToPackage{paperwidth=148mm,paperheight=210mm,twoside,
     inner=1.7cm,outer=1.7cm,top=2.25cm,bottom=2.25cm}{geometry}}
@@ -152,11 +151,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Command to generate the title
 \newcommand\@mytitle{
-    \large\textbf{\textsc{\@university\\
+    \large\textbf{\textsc{\\\vspace{2em}
     \ifthenelse{\isundefined{\@hoja}}{}{\@hoja\\}
-    \normalsize
-    \@materia\ \ $\bullet$\ \
-    \@note}}\\
+    \LARGE
+    \@materia}}\\
     \ifthenelse{\isundefined{\@topic}}{}{\normalsize\textsc{\@topic}\\}
     }
 \newcommand\@inlogouno{
@@ -186,12 +184,12 @@
             {\@mytitle}
             {
                 \@inlogouno
-                \parbox{\@longtitulo}{\centering \@mytitle}
+                \parbox{\@longtitulo}{\Huge\centering \@mytitle}
             }
         }
         {
             \@inlogouno\hfill
-            \parbox{\@longtitulo}{\centering \@mytitle}\hfill
+            \parbox{\@longtitulo}{\Huge\centering \@mytitle}\hfill
             \@inlogodos
         }
     \end{center}

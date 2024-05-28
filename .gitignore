@@ -1,6 +1,7 @@
 # Compiled python modules.
 *.pyc
 *test*
+*.texpadtmp
 
 # Byte-compiled
 _pycache__/
